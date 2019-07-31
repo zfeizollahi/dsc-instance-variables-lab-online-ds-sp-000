@@ -52,8 +52,6 @@ def find_driver_by_name(drivers, name):
     pass
 ```
 
-To test your function, here's some arbitrary definitions to create instances of your Driver class. Run the cells below. 
-
 
 ```python
 alex_driver = Driver()
@@ -71,11 +69,20 @@ ashleigh_driver.rating = 8.75
 list_of_drivers = [alex_driver, michelle_driver, jake_driver, ashleigh_driver]
 ```
 
+To test your function, here's some arbitrary definitions to create instances of your Driver class. Run the cells below. 
+
 
 ```python
 output = find_driver_by_name(list_of_drivers, "jake")
 output
 ```
+
+
+
+
+    <__main__.Driver at 0x109d976a0>
+
+
 
 
 ```python
@@ -84,10 +91,20 @@ output
 ```
 
 
+
+
+    <__main__.Driver at 0x109d97630>
+
+
+
+
 ```python
 output = find_driver_by_name(list_of_drivers, "allison")
 output
 ```
+
+    Sorry we couldn't find a driver with the name, allison! :(
+
 
 If you've correctly coded the find driver by name function, then the first two calls should have returned Driver objects, while the third should have printed the appology statement and returned `None`. (You can further inspect the final output to verify this using the type() method which should reveal that the output is indeed a `Nonetype`; a plain call to output as written above return nonething.
 
@@ -152,6 +169,9 @@ names_of_passengers = None # assign the return of best_driver.passenger_names()
 print(names_of_passengers)
 ```
 
+    ['alex', 'michelle', 'jake', 'ashleigh']
+
+
 If you would like to see a more formatted list, try calling the method below on the best_driver instance:
 
 
@@ -165,6 +185,12 @@ def display_names():
 # call display_names to see a formatted list of names
 display_names()
 ```
+
+    1. alex
+    2. michelle
+    3. jake
+    4. ashleigh
+
 
 Neat -- great work! 
 
