@@ -54,7 +54,7 @@ def find_driver_by_name(drivers, name):
     for driver in drivers:
         if driver.name  == name:
             return driver
-    print("Sorry we couldn't fomd a driver with the name, {}! :(".format(name))
+    print("Sorry we couldn't find a driver with the name, {}! :(".format(name))
     return None
 ```
 
@@ -86,14 +86,22 @@ output
 
 
 
-    <__main__.Driver at 0x10a791f60>
+    <__main__.Driver at 0x109d976a0>
 
 
 
 
 ```python
 output = find_driver_by_name(list_of_drivers, "michelle")
+output
 ```
+
+
+
+
+    <__main__.Driver at 0x109d97630>
+
+
 
 
 ```python
@@ -101,7 +109,7 @@ output = find_driver_by_name(list_of_drivers, "allison")
 output
 ```
 
-    Sorry we couldn't fomd a driver with the name, allison! :(
+    Sorry we couldn't find a driver with the name, allison! :(
 
 
 If you've correctly coded the find driver by name function, then the first two calls should have returned Driver objects, while the third should have printed the appology statement and returned `None`. (You can further inspect the final output to verify this using the type() method which should reveal that the output is indeed a `Nonetype`; a plain call to output as written above return nonething.
