@@ -87,8 +87,25 @@ def find_driver_by_name(drivers, name):
     for driver in drivers:
         if driver.name  == name:
             return driver
-    print("Sorry we couldn't fomd a driver with the name, {}! :(".format(name))
+    print("Sorry we couldn't find a driver with the name, {}! :(".format(name))
     return None
+```
+
+
+```python
+alex_driver = Driver()
+alex_driver.name = "alex"
+alex_driver.rating = 9.0
+michelle_driver = Driver()
+michelle_driver.name = "michelle"
+michelle_driver.rating = 8.0
+jake_driver = Driver()
+jake_driver.name = "jake"
+jake_driver.rating = 9.7
+ashleigh_driver = Driver()
+ashleigh_driver.name = "ashleigh"
+ashleigh_driver.rating = 8.75
+list_of_drivers = [alex_driver, michelle_driver, jake_driver, ashleigh_driver]
 ```
 
 
@@ -113,26 +130,16 @@ To test your function, here's some arbitrary definitions to create instances of 
 
 
 ```python
-alex_driver = Driver()
-alex_driver.name = "alex"
-alex_driver.rating = 9.0
-michelle_driver = Driver()
-michelle_driver.name = "michelle"
-michelle_driver.rating = 8.0
-jake_driver = Driver()
-jake_driver.name = "jake"
-jake_driver.rating = 9.7
-ashleigh_driver = Driver()
-ashleigh_driver.name = "ashleigh"
-ashleigh_driver.rating = 8.75
-list_of_drivers = [alex_driver, michelle_driver, jake_driver, ashleigh_driver]
-```
-
-
-```python
 output = find_driver_by_name(list_of_drivers, "jake")
 output
 ```
+
+
+
+
+    <__main__.Driver at 0x109d976a0>
+
+
 
 
 ```python
@@ -141,10 +148,20 @@ output
 ```
 
 
+
+
+    <__main__.Driver at 0x109d97630>
+
+
+
+
 ```python
 output = find_driver_by_name(list_of_drivers, "allison")
 output
 ```
+
+    Sorry we couldn't find a driver with the name, allison! :(
+
 
 
 ```python
@@ -156,7 +173,7 @@ output
 
 
 
-    <__main__.Driver at 0x10a791f60>
+    <__main__.Driver at 0x109d976a0>
 
 
 
@@ -164,7 +181,15 @@ output
 ```python
 # __SOLUTION__ 
 output = find_driver_by_name(list_of_drivers, "michelle")
+output
 ```
+
+
+
+
+    <__main__.Driver at 0x109d97630>
+
+
 
 
 ```python
@@ -173,7 +198,7 @@ output = find_driver_by_name(list_of_drivers, "allison")
 output
 ```
 
-    Sorry we couldn't fomd a driver with the name, allison! :(
+    Sorry we couldn't find a driver with the name, allison! :(
 
 
 If you've correctly coded the find driver by name function, then the first two calls should have returned Driver objects, while the third should have printed the appology statement and returned `None`. (You can further inspect the final output to verify this using the type() method which should reveal that the output is indeed a `Nonetype`; a plain call to output as written above return nonething.
@@ -311,6 +336,9 @@ names_of_passengers = None # assign the return of best_driver.passenger_names()
 print(names_of_passengers)
 ```
 
+    ['alex', 'michelle', 'jake', 'ashleigh']
+
+
 
 ```python
 # __SOLUTION__ 
@@ -334,6 +362,12 @@ def display_names():
 # call display_names to see a formatted list of names
 display_names()
 ```
+
+    1. alex
+    2. michelle
+    3. jake
+    4. ashleigh
+
 
 
 ```python
